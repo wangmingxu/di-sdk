@@ -1,7 +1,7 @@
 import { InjectionToken } from 'injection-js';
-declare const Cookies: any;
+declare const SuperClass: any;
 declare const COOKIE_STR_TOKEN: InjectionToken<{}>;
-declare class CookieService extends Cookies {
+declare class CookieService extends SuperClass {
     constructor(cookieStr: string);
 }
 export { CookieService, COOKIE_STR_TOKEN };

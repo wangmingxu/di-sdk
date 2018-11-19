@@ -4,6 +4,7 @@ var tslib_1 = require("tslib");
 var injection_js_1 = require("injection-js");
 // tslint:disable-next-line:no-var-requires
 var Cookies = require('universal-cookie');
+var SuperClass = Cookies.default || Cookies;
 var COOKIE_STR_TOKEN = new injection_js_1.InjectionToken('COOKIE_STRING');
 exports.COOKIE_STR_TOKEN = COOKIE_STR_TOKEN;
 var CookieService = /** @class */ (function (_super) {
@@ -20,7 +21,7 @@ var CookieService = /** @class */ (function (_super) {
         tslib_1.__metadata("design:paramtypes", [String])
     ], CookieService);
     return CookieService;
-}(Cookies));
+}(SuperClass));
 exports.CookieService = CookieService;
 exports.default = CookieService;
 //# sourceMappingURL=CookieService.js.map
