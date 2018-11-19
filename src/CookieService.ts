@@ -1,5 +1,5 @@
 import { Inject, Injectable, InjectionToken } from 'injection-js';
-import Cookies from 'universal-cookie';
+import { default as Cookies } from 'universal-cookie';
 
 const COOKIE_STR_TOKEN = new InjectionToken('COOKIE_STRING');
 
