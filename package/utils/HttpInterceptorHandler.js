@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var HttpInterceptorHandler = /** @class */ (function () {
     /**
      * @param {?} next
@@ -16,5 +18,5 @@ var HttpInterceptorHandler = /** @class */ (function () {
     };
     return HttpInterceptorHandler;
 }());
-export default HttpInterceptorHandler;
+exports.default = HttpInterceptorHandler;
 //# sourceMappingURL=HttpInterceptorHandler.js.map

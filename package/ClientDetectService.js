@@ -1,7 +1,11 @@
-import * as tslib_1 from "tslib";
-import { Inject, Injectable, InjectionToken, Injector, } from 'injection-js';
-var APP_USERAGENT_TOKEN = new InjectionToken('APP_USERAGENT_TOKEN');
-var EXTENDS_CLIENT_TOKEN = new InjectionToken('EXTENDS_CLIENT_TOKEN');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = require("tslib");
+var injection_js_1 = require("injection-js");
+var APP_USERAGENT_TOKEN = new injection_js_1.InjectionToken('APP_USERAGENT_TOKEN');
+exports.APP_USERAGENT_TOKEN = APP_USERAGENT_TOKEN;
+var EXTENDS_CLIENT_TOKEN = new injection_js_1.InjectionToken('EXTENDS_CLIENT_TOKEN');
+exports.EXTENDS_CLIENT_TOKEN = EXTENDS_CLIENT_TOKEN;
 var ClientDetectService = /** @class */ (function () {
     // static get parameters() {
     //   return [new Inject(APP_USERAGENT_TOKEN), Injector];
@@ -87,12 +91,12 @@ var ClientDetectService = /** @class */ (function () {
         configurable: true
     });
     ClientDetectService = tslib_1.__decorate([
-        Injectable(),
-        tslib_1.__param(0, Inject(APP_USERAGENT_TOKEN)),
-        tslib_1.__metadata("design:paramtypes", [String, Injector])
+        injection_js_1.Injectable(),
+        tslib_1.__param(0, injection_js_1.Inject(APP_USERAGENT_TOKEN)),
+        tslib_1.__metadata("design:paramtypes", [String, injection_js_1.Injector])
     ], ClientDetectService);
     return ClientDetectService;
 }());
-export { APP_USERAGENT_TOKEN, ClientDetectService, EXTENDS_CLIENT_TOKEN };
-export default ClientDetectService;
+exports.ClientDetectService = ClientDetectService;
+exports.default = ClientDetectService;
 //# sourceMappingURL=ClientDetectService.js.map

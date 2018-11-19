@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var RelpathRequestInterceptor = /** @class */ (function () {
     function RelpathRequestInterceptor() {
     }
@@ -12,5 +14,5 @@ var RelpathRequestInterceptor = /** @class */ (function () {
     };
     return RelpathRequestInterceptor;
 }());
-export default RelpathRequestInterceptor;
+exports.default = RelpathRequestInterceptor;
 //# sourceMappingURL=RelpathReqInterceptor.js.map

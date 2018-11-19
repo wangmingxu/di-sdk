@@ -1,10 +1,15 @@
-import * as tslib_1 from "tslib";
-import axios from 'axios';
-import { Injectable, InjectionToken, Injector } from 'injection-js';
-import HttpInterceptorHandler from './utils/HttpInterceptorHandler';
-var HTTP_REQUEST_INTERCEPTORS = new InjectionToken('HTTP_REQUEST_INTERCEPTORS');
-var HTTP_RESPONSE_INTERCEPTORS = new InjectionToken('HTTP_RESPONSE_INTERCEPTORS');
-var HTTP_ALIAS_TOKEN = new InjectionToken('HTTP_ALIAS_TOKEN');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var tslib_1 = require("tslib");
+var axios_1 = require("axios");
+var injection_js_1 = require("injection-js");
+var HttpInterceptorHandler_1 = require("./utils/HttpInterceptorHandler");
+var HTTP_REQUEST_INTERCEPTORS = new injection_js_1.InjectionToken('HTTP_REQUEST_INTERCEPTORS');
+exports.HTTP_REQUEST_INTERCEPTORS = HTTP_REQUEST_INTERCEPTORS;
+var HTTP_RESPONSE_INTERCEPTORS = new injection_js_1.InjectionToken('HTTP_RESPONSE_INTERCEPTORS');
+exports.HTTP_RESPONSE_INTERCEPTORS = HTTP_RESPONSE_INTERCEPTORS;
+var HTTP_ALIAS_TOKEN = new injection_js_1.InjectionToken('HTTP_ALIAS_TOKEN');
+exports.HTTP_ALIAS_TOKEN = HTTP_ALIAS_TOKEN;
 var HttpMethods = ['GET', 'POST', 'PUT', 'DELETE'];
 var HttpService = /** @class */ (function () {
     // static get parameters() {
@@ -37,7 +42,7 @@ var HttpService = /** @class */ (function () {
                 return fMap;
             }, {});
         };
-        this.axiosInstance = axios.create();
+        this.axiosInstance = axios_1.default.create();
         var reqhandlers = injector.get(HTTP_REQUEST_INTERCEPTORS, []);
         var reshandlers = injector.get(HTTP_RESPONSE_INTERCEPTORS, []);
         this.interceptRequest(reqhandlers);
@@ -47,22 +52,22 @@ var HttpService = /** @class */ (function () {
     }
     HttpService.prototype.interceptRequest = function (interceptors) {
         this.axiosInstance.interceptors.request.use(function (req) {
-            var chain = interceptors.reduceRight(function (next, interceptor) { return new HttpInterceptorHandler(next, interceptor); }, null);
+            var chain = interceptors.reduceRight(function (next, interceptor) { return new HttpInterceptorHandler_1.default(next, interceptor); }, null);
             return chain.handle(req);
         });
     };
     HttpService.prototype.interceptResponse = function (interceptors) {
         this.axiosInstance.interceptors.response.use(function (res) {
-            var chain = interceptors.reduceRight(function (next, interceptor) { return new HttpInterceptorHandler(next, interceptor); }, null);
+            var chain = interceptors.reduceRight(function (next, interceptor) { return new HttpInterceptorHandler_1.default(next, interceptor); }, null);
             return chain.handle(res);
         });
     };
     HttpService = tslib_1.__decorate([
-        Injectable(),
-        tslib_1.__metadata("design:paramtypes", [Injector])
+        injection_js_1.Injectable(),
+        tslib_1.__metadata("design:paramtypes", [injection_js_1.Injector])
     ], HttpService);
     return HttpService;
 }());
-export { HttpService, HTTP_REQUEST_INTERCEPTORS, HTTP_RESPONSE_INTERCEPTORS, HTTP_ALIAS_TOKEN };
-export default HttpService;
+exports.HttpService = HttpService;
+exports.default = HttpService;
 //# sourceMappingURL=HttpService.js.map
