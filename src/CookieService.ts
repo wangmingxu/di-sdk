@@ -1,5 +1,6 @@
 import { Inject, Injectable, InjectionToken } from 'injection-js';
-import { default as Cookies } from 'universal-cookie';
+// tslint:disable-next-line:no-var-requires
+const Cookies = require('universal-cookie');
 
 const COOKIE_STR_TOKEN = new InjectionToken('COOKIE_STRING');
 
