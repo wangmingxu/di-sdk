@@ -1,0 +1,23 @@
+{
+  "name": "di-sdk",
+  "version": "1.0.0",
+  "description": "DI container for service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.16.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.9",
+    "axios": "^0.18.0",
+    "injection-js": "^2.2.1",
+    "reflect-metadata": "^0.1.12",
+    "universal-cookie": "^3.0.4"
+  }
+}
