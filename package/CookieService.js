@@ -23,4 +23,3 @@ var CookieService = /** @class */ (function (_super) {
 }(Cookies));
 exports.CookieService = CookieService;
 exports.default = CookieService;
-//# sourceMappingURL=CookieService.js.map

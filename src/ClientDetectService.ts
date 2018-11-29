@@ -6,7 +6,7 @@ const APP_USERAGENT_TOKEN = new InjectionToken('APP_USERAGENT_TOKEN');
 
 const EXTENDS_CLIENT_TOKEN = new InjectionToken('EXTENDS_CLIENT_TOKEN');
 
-interface ICDService{
+interface ICDService {
   readonly isAndroid: boolean;
   readonly isIPhone: boolean;
   readonly isIPad: boolean;
@@ -18,7 +18,7 @@ interface ICDService{
 }
 
 @Injectable()
-class ClientDetectService implements ICDService{
+class ClientDetectService implements ICDService {
   // static get parameters() {
   //   return [new Inject(APP_USERAGENT_TOKEN), Injector];
   // }

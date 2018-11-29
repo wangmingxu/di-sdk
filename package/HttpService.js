@@ -70,4 +70,3 @@ var HttpService = /** @class */ (function () {
 }());
 exports.HttpService = HttpService;
 exports.default = HttpService;
-//# sourceMappingURL=HttpService.js.map
